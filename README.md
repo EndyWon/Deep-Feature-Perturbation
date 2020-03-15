@@ -7,4 +7,19 @@ The deep feature perturbation (DFP) operation uses an orthogonal random noise ma
 
 ![show](https://github.com/EndyWon/Deep-Feature-Perturbation/blob/master/figures/show.jpg)
 
-### Environment Required:
+### An Example (UniversalStyleTransfer + our DFP):
+
+* Step-1: Follow the instructions of [UniversalStyleTransfer](https://github.com/Yijunmaverick/UniversalStyleTransfer) to implement their code.
+
+* Step-2: Put our **test_wct_DFP.lua** in the same folder as their **test_wct.lua**.
+
+* Step-3: (1) For a single pair test:
+
+　　　`th test_wct_DFP.lua -content YourContentPath -style YourStylePath -alpha 0.6 -lambda 0.6`
+
+　　　**-alpha**: stylization strength, 　**-lambda**: diversity strength.
+   
+　　　(2) For large numbers of pair test:
+
+　　　`th test_wct_DFP.lua -contentDir YourContentDir -styleDir YourStyleDir -alpha 0.6 -lambda 0.6`
+      

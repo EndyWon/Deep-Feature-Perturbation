@@ -7,7 +7,7 @@ The deep feature perturbation (DFP) operation uses an orthogonal random noise ma
 
 ![show](https://github.com/EndyWon/Deep-Feature-Perturbation/blob/master/figures/show.jpg)
 
-### An Example (UniversalStyleTransfer + our DFP):
+## An Example (UniversalStyleTransfer + our DFP):
 
 * Step-1: Follow the instructions of [UniversalStyleTransfer](https://github.com/Yijunmaverick/UniversalStyleTransfer) to implement their code.
 
@@ -23,3 +23,8 @@ The deep feature perturbation (DFP) operation uses an orthogonal random noise ma
 
 　　　`th test_wct_DFP.lua -contentDir YourContentDir -styleDir YourStyleDir -alpha 0.6 -lambda 0.6`
       
+## Evaluate Diversity:
+
+We evaluate the diversity using two metrics: (1) **Pixel distance** and (2) **[LPIPS](https://arxiv.org/abs/1801.03924) distance**.
+
+* **Pixel distance**: this distance measures the difference between two images in pixel (RGB) space.

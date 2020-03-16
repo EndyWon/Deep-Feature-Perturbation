@@ -41,7 +41,7 @@ We evaluate diversity using two metrics: (1) **Pixel distance** and (2) **[LPIPS
   
 　　Step-2: Use the script to take the average LPIPS distance between all pairs of images within a directory (see more from their [repository](https://github.com/richzhang/PerceptualSimilarity)):
         
- 　　　`python compute_dists_pair.py -d imgs/ex_dir_pair -o imgs/example_dists_pair.txt --use_gpu`
+　　`python compute_dists_pair.py -d imgs/ex_dir_pair -o imgs/example_dists_pair.txt --use_gpu`
      
 ## Comparison Results: 
 

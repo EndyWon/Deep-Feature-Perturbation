@@ -3,7 +3,7 @@
 
 Official implementation of the paper: ["Diversified Arbitrary Style Transfer via Deep Feature Perturbation"](https://arxiv.org/abs/1909.08223) (**CVPR 2020**)
 
-The deep feature perturbation (DFP) operation uses an orthogonal random noise matrix to perturb the deep image feature maps while keeping the original style information unchanged. This operation can be easily integrated into many existing [WCT (whitening and coloring transform)](https://arxiv.org/pdf/1705.08086.pdf)-based methods (e.g., [1. UniversalStyleTransfer](https://github.com/Yijunmaverick/UniversalStyleTransfer), [2. Avatar-Net](https://github.com/LucasSheng/avatar-net), [3. FastPhotoStyle](https://github.com/NVIDIA/FastPhotoStyle)), and empower them to generate diverse results for arbitrary styles. 
+The deep feature perturbation (DFP) operation uses an orthogonal random noise matrix to perturb the deep image feature maps while keeping the original style information unchanged. This operation can be easily integrated into many existing [WCT (whitening and coloring transform)](https://arxiv.org/pdf/1705.08086.pdf)-based methods (e.g., [1. UniversalStyleTransfer (NIPS17)](https://github.com/Yijunmaverick/UniversalStyleTransfer), [2. Avatar-Net (CVPR18)](https://github.com/LucasSheng/avatar-net), [3. FastPhotoStyle (ECCV18)](https://github.com/NVIDIA/FastPhotoStyle)), and empower them to generate diverse results for arbitrary styles. 
 
 ![show](https://github.com/EndyWon/Deep-Feature-Perturbation/blob/master/figures/show.jpg)
 
@@ -25,12 +25,28 @@ The deep feature perturbation (DFP) operation uses an orthogonal random noise ma
       
 ## Evaluate Diversity:
 
-We evaluate the diversity using two metrics: (1) **Pixel distance** and (2) **[LPIPS](https://arxiv.org/abs/1801.03924) distance**. (Higher means further/more different. Lower means more similar.)
+We evaluate diversity using two metrics: (1) **Pixel distance** and (2) **[LPIPS](https://arxiv.org/abs/1801.03924) distance**. (Higher means further/more different. Lower means more similar.)
 
 * **Pixel distance**: this distance measures the difference between two images in pixel (RGB) space.
 
-　　Example script to take the average pixel distance between all pairs of images within a directory:
+　　Example script to take the average Pixel distance between all pairs of images within a directory:
 
 　　`python compute_pixel_dists.py -d YourImageDir`
   
-* **LPIPS distance**: [Learned Perceptual Image Patch Similarity (LPIPS)](https://github.com/richzhang/PerceptualSimilarity#1-learned-perceptual-image-patch-similarity-lpips-metric) metric. It computes distance in deep feature space (in our), with linear weights to better match human perceptual judgments.
+* **LPIPS distance**: [Learned Perceptual Image Patch Similarity (LPIPS)](https://github.com/richzhang/PerceptualSimilarity) metric. It computes distance in deep feature space, with linear weights to better match human perceptual judgments.
+
+　　Step-1: Follow the instructions of [Richard Zhang](https://github.com/richzhang/PerceptualSimilarity) to implement their code.
+  
+　　Step-2: Use the script to take the average LPIPS distance between all pairs of images within a directory (see more from their [repository](https://github.com/richzhang/PerceptualSimilarity)):
+        
+ 　　　`python compute_dists_pair.py -d imgs/ex_dir_pair -o imgs/example_dists_pair.txt --use_gpu`
+     
+## Comparison Results: 
+
+We incorporate our DFP into [UniversalStyleTransfer](https://github.com/Yijunmaverick/UniversalStyleTransfer), [Avatar-Net](https://github.com/LucasSheng/avatar-net), [FastPhotoStyle](https://github.com/NVIDIA/FastPhotoStyle), respectively, and compare them with other two diversified style transfer methods: [ImprovedTextureNets (CVPR17)](https://github.com/DmitryUlyanov/texture_nets/tree/diversity) and [MultiTextureSynthesis (CVPR17)](https://github.com/Yijunmaverick/MultiTextureSynthesis).
+
+| Method | ImprovedTextureNets | MultiTextureSynthesis | UniversalStyleTransfer<br> + our DFP | AvatarNet<br> + our DFP | FastPhotoStyle<br> + our DFP |
+| :---:  | :---:       | :---: | :---: | :---:    | :---:         |
+| **Pixel_Dist** | 0.077 | 0.080 | **0.162** | **0.102** | **0.091** |
+| **LPIPS_Dist** | 0.163 | 0.175 | **0.431** | **0.264** | **0.203** |
+ 

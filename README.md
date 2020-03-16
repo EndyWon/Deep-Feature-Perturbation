@@ -25,6 +25,12 @@ The deep feature perturbation (DFP) operation uses an orthogonal random noise ma
       
 ## Evaluate Diversity:
 
-We evaluate the diversity using two metrics: (1) **Pixel distance** and (2) **[LPIPS](https://arxiv.org/abs/1801.03924) distance**.
+We evaluate the diversity using two metrics: (1) **Pixel distance** and (2) **[LPIPS](https://arxiv.org/abs/1801.03924) distance**. (Higher means further/more different. Lower means more similar.)
 
 * **Pixel distance**: this distance measures the difference between two images in pixel (RGB) space.
+
+　　Example script to take the average pixel distance between all pairs of images within a directory:
+
+　　`python compute_pixel_dists.py -d YourImageDir`
+  
+* **LPIPS distance**: [Learned Perceptual Image Patch Similarity (LPIPS)](https://github.com/richzhang/PerceptualSimilarity#1-learned-perceptual-image-patch-similarity-lpips-metric) metric. It computes distance in deep feature space (in our), with linear weights to better match human perceptual judgments.

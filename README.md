@@ -25,7 +25,9 @@ The deep feature perturbation (DFP) operation uses an orthogonal random noise ma
       
 ## Evaluate Diversity:
 
-We evaluate diversity using two metrics: (1) **Pixel distance** and (2) **[LPIPS](https://arxiv.org/abs/1801.03924) distance**. (Higher means further/more different. Lower means more similar.)
+We evaluate diversity using two metrics: (1) **Pixel distance** and (2) **[LPIPS](https://arxiv.org/abs/1801.03924) distance**. 
+
+(**Higher means further/more different. Lower means more similar.**)
 
 * **Pixel distance**: this distance measures the difference between two images in pixel (RGB) space.
 

@@ -73,4 +73,4 @@ Zhizhong Wang, Lei Zhao, Haibo Chen, Lihong Qiu, Qihang Mo, Sihuan Lin, Wei Xing
 
 ## Acknowledgement:
 
-This project is based on many WCT-based style transfer methods, including [UniversalStyleTransfer](https://github.com/Yijunmaverick/UniversalStyleTransfer), [Avatar-Net](https://github.com/LucasSheng/avatar-net), [FastPhotoStyle](https://github.com/NVIDIA/FastPhotoStyle).
+This project is based on existing WCT-based style transfer methods, including [UniversalStyleTransfer](https://github.com/Yijunmaverick/UniversalStyleTransfer), [Avatar-Net](https://github.com/LucasSheng/avatar-net), [FastPhotoStyle](https://github.com/NVIDIA/FastPhotoStyle).

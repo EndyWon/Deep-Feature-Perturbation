@@ -29,6 +29,8 @@ We evaluate diversity using two metrics: (1) **Pixel distance** and (2) **[LPIPS
 
 (**Higher means further/more different. Lower means more similar.**)
 
+The data (6 content images and 6 style images) we used for evaluation can be found in 
+
 * **Pixel distance**: this distance measures the difference between two images in pixel (RGB) space.
 
 　　Example script to take the average Pixel distance between all pairs of images within a directory:
@@ -52,3 +54,24 @@ We incorporate our DFP into [UniversalStyleTransfer](https://github.com/Yijunmav
 | **Pixel_Dist** | 0.077 | 0.080 | **0.162** | **0.102** | **0.091** |
 | **LPIPS_Dist** | 0.163 | 0.175 | **0.431** | **0.264** | **0.203** |
  
+![comparison](https://github.com/EndyWon/Deep-Feature-Perturbation/blob/master/figures/comparison.jpg)
+
+## Citation
+
+If you find this code useful for your research, please cite the paper:
+
+Zhizhong Wang, Lei Zhao, Haibo Chen, Lihong Qiu, Qihang Mo, Sihuan Lin, Wei Xing and Dongming Lu, "Diversified Arbitrary Style Transfer via Deep Feature Perturbation", In Proceedings of the IEEE Conference on Computer Vision and Pattern Recognition (CVPR), 2020. [[Arxiv](https://arxiv.org/abs/1909.08223)]
+
+```
+@inproceedings{wang2019diversified,
+    Title = {Diversified Arbitrary Style Transfer via Deep Feature Perturbation},
+    author = {Wang, Zhizhong and Zhao, Lei and Chen, Haibo and Qiu, Lihong and Mo, Qihang and Lin, Sihuan and Xing, Wei and Lu, Dongming},
+    Booktitle = {Proceedings of the IEEE Conference on Computer Vision and Pattern Recognition (CVPR)},
+    pages={1--9},
+    year={2020}
+}
+```
+
+## Acknowledgement
+
+This project is based on many WCT-based style transfer methods, including [UniversalStyleTransfer](https://github.com/Yijunmaverick/UniversalStyleTransfer), [Avatar-Net](https://github.com/LucasSheng/avatar-net), [FastPhotoStyle](https://github.com/NVIDIA/FastPhotoStyle).

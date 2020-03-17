@@ -29,7 +29,7 @@ We evaluate diversity using two metrics: (1) **Pixel distance** and (2) **[LPIPS
 
 (**Higher means further/more different. Lower means more similar.**)
 
-The data (6 content images and 6 style images) we used for evaluation can be found in 
+The data (6 content images and 6 style images) we used for evaluation can be found in **"evaluation_data"** directory. See **Section 5.3** in our [paper](https://arxiv.org/abs/1909.08223) for more details about the evaluation.
 
 * **Pixel distance**: this distance measures the difference between two images in pixel (RGB) space.
 

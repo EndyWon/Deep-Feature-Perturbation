@@ -1,5 +1,5 @@
 # Deep Feature Perturbation
-**[update 3/15/2020]**
+**[update 3/20/2020]**
 
 Official implementation of the paper: ["Diversified Arbitrary Style Transfer via Deep Feature Perturbation"](https://arxiv.org/abs/1909.08223) (**CVPR 2020**)
 

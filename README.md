@@ -64,7 +64,7 @@ Zhizhong Wang, Lei Zhao, Haibo Chen, Lihong Qiu, Qihang Mo, Sihuan Lin, Wei Xing
 
 ```
 @inproceedings{wang2020diversified,
-    Title = {Diversified Arbitrary Style Transfer via Deep Feature Perturbation},
+    title = {Diversified Arbitrary Style Transfer via Deep Feature Perturbation},
     author = {Wang, Zhizhong and Zhao, Lei and Chen, Haibo and Qiu, Lihong and Mo, Qihang and Lin, Sihuan and Xing, Wei and Lu, Dongming},
     Booktitle = {Proceedings of the IEEE Conference on Computer Vision and Pattern Recognition (CVPR)},
     year={2020}

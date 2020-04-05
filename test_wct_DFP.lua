@@ -223,7 +223,7 @@ function feature_wct(contentFeature, styleFeature, lambda, add_noise)
         -- originalRandomNoise = torch.rand(k_s,k_s):float()         -- uniform distribution
         originalRandomNoise = torch.randn(k_s,k_s):float()       -- standard normal distribution
         
-        local n_u, n_e, n_v = torch.svd(originalRandomNoise:float(), 'A')
+        local n_u, n_e, n_v = torch.svd(originalRandomNoise, 'A')
         orthogonalNoise = n_u
     end
     --------------------------------------------------------
